@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop Auto Parts in Zimbabwe | Nicbel Motor Spares</title>
+  <link rel="icon" type="image/png" href="assets/favicon-zoom.png?v=20261012-zoom" />
+<link rel="stylesheet" href="assets/styles.css?v=20261012" />
+  <link rel="stylesheet" href="assets/editorial.css?v=20261012-hosting" />
+<meta name="description" content="Find headlights, brakes, filters, suspension, electrical parts and engine components in Zimbabwe. Select your vehicle and send Nicbel a parts enquiry." />
+  <link rel="canonical" href="https://www.nicbel.org/category.html" />
+  <meta name="robots" content="index,follow" />
+  <meta property="og:title" content="Shop Auto Parts in Zimbabwe | Nicbel Motor Spares" />
+  <meta property="og:description" content="Find headlights, brakes, filters, suspension, electrical parts and engine components in Zimbabwe. Select your vehicle and send Nicbel a parts enquiry." />
+  <meta property="og:url" content="https://www.nicbel.org/category.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://www.nicbel.org/assets/home%20page.webp" />
+  <meta name="twitter:card" content="summary_large_image" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <div class="topbar"><div class="topbar-inner"><div class="topbar-left"><a class="topbar-phone" href="tel:+263715215962">+263 715 215 962</a><a class="topbar-email" href="mailto:sales@nicbel.org">sales@nicbel.org</a><span class="topbar-msg">Supplying Quality Engines Across Zimbabwe</span></div></div></div>
+    <nav class="editorial-nav container" aria-label="Main navigation"><a class="brand-lockup" href="index.html" aria-label="Nicbel home"><img class="brand-logo" src="assets/Nickbel%20Logo.webp" alt="" width="46" height="46" decoding="async" /><span class="brand-wordmark"><strong>NICBEL</strong><small>MOTOR SPARES</small></span></a><div class="desktop-links"><a href="index.html">Home</a><a href="category.html" aria-current="page">Shop Parts</a><a href="about.html">About</a><a href="contact.html">Contact</a></div><div class="header-tools"><button id="searchToggleBtn" class="header-search-toggle" type="button" aria-label="Search parts" aria-expanded="false" aria-controls="siteSearchPanel"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg></button><button id="menuToggleBtn" class="menu-pop-btn" type="button" aria-expanded="false" aria-controls="menuDrawer">Menu<span class="menu-lines" aria-hidden="true"></span></button></div></nav><form id="siteSearchPanel" class="site-search container" role="search" hidden><input id="globalSearch" class="search-input" type="search" placeholder="Search part name or OEM #" aria-label="Search part name or OEM number" /><button id="globalSearchBtn" type="submit" class="btn">Search ↗</button></form>
+  </header>
+  <div id="menuOverlay" class="menu-overlay" hidden></div>
+  <aside id="menuDrawer" class="menu-drawer" hidden aria-hidden="true" role="dialog" aria-modal="true" aria-label="Navigation menu"><div class="menu-drawer-head"><a class="brand-lockup" href="index.html" aria-label="Nicbel home"><img class="brand-logo" src="assets/Nickbel%20Logo.webp" alt="" width="46" height="46" decoding="async" /><span class="brand-wordmark"><strong>NICBEL</strong><small>MOTOR SPARES</small></span></a><button id="menuCloseBtn" type="button" class="menu-close-btn" aria-label="Close menu">×</button></div><p class="menu-drawer-label">Explore Nicbel</p><nav class="menu-drawer-links" aria-label="Expanded navigation"><a href="index.html">Home</a><a href="category.html" aria-current="page">Shop Parts</a><a href="shop-by-vehicle.html">Shop by Vehicle</a><a href="about.html">About Nicbel</a><a href="about.html#about-what-we-do">What We Do</a><a href="contact.html">Contact Us</a></nav><div class="drawer-info"><a href="tel:+263715215962">+263 715 215 962</a><a href="mailto:sales@nicbel.org">sales@nicbel.org</a></div></aside>
+  <section class="page-intro"><div class="container"><span class="eyebrow">Find your next part</span><h1>Select auto parts.</h1><p>Genuine and quality aftermarket parts. Select a part, choose your vehicle, and let us help you find the right fit.</p></div></section>
+  <main id="main-content" class="container section listing-layout">
+    <aside id="shop-filters" class="filters card">
+      <h2>Filters</h2>
+      <label>Vehicle Make
+        <select id="brandFilter"><option value="">All</option></select>
+      </label>
+      <label>Vehicle model
+        <input id="fitModel" type="text" placeholder="Type vehicle model" />
+      </label>
+      <label>Year of Manufacture
+        <select id="fitYear"><option value="">Year</option></select>
+      </label>
+      <label>Part Type
+        <select id="typeFilter"><option value="">All</option></select>
+      </label>
+      <section class="selected-parts">
+        <h3>Selected Parts</h3>
+        <p id="selectedPartsEmpty">No parts selected yet.</p>
+        <div id="selectedPartsList" class="selected-parts-list"></div>
+        <div id="selectedTypeChips" class="selected-type-chips"></div>
+        <button id="clearFilters" class="btn btn-outline" type="button">Clear Filters</button>
+        <h3>Selected Filters</h3>
+        <ul id="selectedFilterItems" class="selected-filter-items">
+          <li>No filters selected yet.</li>
+        </ul>
+        <button id="sendSelectedMessage" class="btn btn-accent" type="button">Send Message</button>
+      </section>
+    </aside>
+
+    <section>
+      <div class="section-head">
+        <h2>Select auto parts</h2>
+      </div>
+      <section id="brandChoicePanel" class="card brand-choice-panel" hidden>
+        <h3>Choose Vehicle Brand</h3>
+        <p>Select a car brand for: <strong id="selectedPartName">-</strong></p>
+        <div id="brandChoiceButtons" class="brand-choice-buttons"></div>
+      </section>
+      <section class="card select-part-block">
+        <p class="select-part-intro">Select a part from the list:</p>
+        <div class="select-part-list">
+          <article class="select-part-item clickable-part" data-part-group="4. Electrical &amp; Lighting" data-part-key="lighting"><p>Lighting</p><div class="part-image-slot" aria-hidden="true"></div></article>
+          <article class="select-part-item clickable-part" data-part-group="4. Electrical &amp; Lighting" data-part-key="electrical-parts"><p>Electrical parts</p><div class="part-image-slot" aria-hidden="true"></div></article>
+          <article class="select-part-item clickable-part" data-part-group="1. Engine &amp; Service Parts" data-part-key="thermical-parts"><p>Thermical parts</p><div class="part-image-slot" aria-hidden="true"></div></article>
+          <section id="lightingDetailsPanel" class="lighting-details-panel" hidden>
+            <button id="lightingDetailsClose" class="lighting-details-close" type="button" aria-label="Close">×</button>
+            <div class="lighting-details-grid">
+              <ul>
+                <li><button class="lighting-item-btn" type="button">Main headlamp</button></li>
+                <li><button class="lighting-item-btn" type="button">Front fog lamp</button></li>
+                <li><button class="lighting-item-btn" type="button">Bulb</button></li>
+              </ul>
+              <ul>
+                <li><button class="lighting-item-btn" type="button">Tail light</button></li>
+                <li><button class="lighting-item-btn" type="button">Number plate light</button></li>
+                <li><button class="lighting-item-btn" type="button">Headlamp lens</button></li>
+              </ul>
+              <ul>
+                <li><button class="lighting-item-btn" type="button">Side flasher</button></li>
+                <li><button class="lighting-item-btn" type="button">Indicator</button></li>
+                <li><button class="lighting-item-btn" type="button">Reflective element</button></li>
+              </ul>
+            </div>
+            <p class="lighting-details-link">Lighting »</p>
+          </section>
+          <section id="headlampBrandsPanel" class="card headlamp-brands-panel" hidden>
+            <h3>Headlamp for cars</h3>
+            <div id="headlampBrandsGrid" class="headlamp-brands-grid"></div>
+          </section>
+          <section id="electricalDetailsPanel" class="lighting-details-panel" hidden>
+            <button id="electricalDetailsClose" class="lighting-details-close" type="button" aria-label="Close">×</button>
+            <div class="lighting-details-grid">
+              <ul>
+                <li>Spark Plug</li>
+                <li>Crankshaft position sensor</li>
+                <li>Lambda sensors</li>
+                <li>Sender Unit, coolant temperature</li>
+              </ul>
+              <ul>
+                <li>Abs sensor</li>
+                <li>Ignition coil</li>
+                <li>Air flow sensor</li>
+                <li>Glow plug</li>
+              </ul>
+              <ul>
+                <li>Fuel pump</li>
+                <li>Electrical parts</li>
+              </ul>
+            </div>
+            <p class="lighting-details-link">Electrical parts »</p>
+          </section>
+          <section id="thermicalDetailsPanel" class="lighting-details-panel" hidden>
+            <button id="thermicalDetailsClose" class="lighting-details-close" type="button" aria-label="Close">×</button>
+            <div class="lighting-details-grid">
+              <ul>
+                <li>Thermostat</li>
+                <li>Interior blower</li>
+                <li>Expansion tank</li>
+                <li>Heat blower controller</li>
+              </ul>
+              <ul>
+                <li>Water Pump</li>
+                <li>Radiator cap</li>
+                <li>AC condenser</li>
+                <li>Thermical parts</li>
+              </ul>
+              <ul>
+                <li>Radiator</li>
+                <li>Radiator Hose</li>
+              </ul>
+            </div>
+            <p class="lighting-details-link">Thermical parts »</p>
+          </section>
+          <article class="select-part-item clickable-part" data-part-group="3. Body &amp; Exterior Parts" data-part-key="work-shop-equipment"><p>Work-shop equipment</p><div class="part-image-slot" aria-hidden="true"></div></article>
+          <section id="workshopDetailsPanel" class="lighting-details-panel" hidden>
+            <button id="workshopDetailsClose" class="lighting-details-close" type="button" aria-label="Close">&times;</button>
+            <div class="lighting-details-grid">
+              <ul>
+                <li>Screw</li>
+                <li>Clip</li>
+              </ul>
+              <ul>
+                <li>Nut</li>
+                <li>Switch</li>
+              </ul>
+              <ul>
+                <li>Bearing</li>
+                <li>Work-shop equipment</li>
+              </ul>
+            </div>
+            <p class="lighting-details-link">Work-shop equipment »</p>
+          </section>
+          <article class="select-part-item clickable-part" data-part-group="4. Electrical &amp; Lighting" data-part-key="switches"><p>Switches</p><div class="part-image-slot" aria-hidden="true"></div></article>
+          <section id="switchesDetailsPanel" class="lighting-details-panel" hidden>
+            <button id="switchesDetailsClose" class="lighting-details-close" type="button" aria-label="Close">&times;</button>
+            <div class="lighting-details-grid">
+              <ul>
+                <li>Door glass switch</li>
+                <li>Main switch</li>
+                <li>Switch, headlight</li>
+                <li>Switch, park brake actuation</li>
+              </ul>
+              <ul>
+                <li>Switch, reverse light</li>
+                <li>Mirror adjusting switch</li>
+                <li>Door opening switch</li>
+                <li>Switches</li>
+              </ul>
+              <ul>
+                <li>Steering column switch</li>
+                <li>Warning lamp switch</li>
+              </ul>
+            </div>
+            <p class="lighting-details-link">Switches »</p>
+          </section>
+          <article class="select-part-item clickable-part" data-part-group="3. Body &amp; Exterior Parts" data-part-key="clamps-mounting"><p>Clamps and mounting parts</p><div class="part-image-slot" aria-hidden="true"></div></article>
+          <section id="clampsDetailsPanel" class="lighting-details-panel" hidden>
+            <button id="clampsDetailsClose" class="lighting-details-close" type="button" aria-label="Close">&times;</button>
+            <div class="lighting-details-grid">
+              <ul>
+                <li>Clip, trim/protective strip</li>
+                <li>Clamp set</li>
+                <li>Pin</li>
+                <li>Fitting panel</li>
+              </ul>
+              <ul>
+                <li>Windscreen washer system instalation part</li>
+                <li>Bolt, brake disc</li>
+                <li>Fixing screw</li>
+                <li>Clamps and mounting parts</li>
+              </ul>
+              <ul>
+                <li>Clamps</li>
+                <li>Mounting pad</li>
+              </ul>
+            </div>
+            <p class="lighting-details-link">Clamps and mounting parts »</p>
+          </section>
+          <article class="select-part-item clickable-part" data-part-group="2. Suspension &amp; Steering" data-part-key="shock-absorbers"><p>Shock absorbers</p><div class="part-image-slot" aria-hidden="true"></div></article>
+          <article class="select-part-item clickable-part" data-part-group="2. Suspension &amp; Steering" data-part-key="steering-parts"><p>Steering parts</p><div class="part-image-slot" aria-hidden="true"></div></article>
+          <article class="select-part-item clickable-part" data-part-group="4. Electrical &amp; Lighting" data-part-key="windscreen-wiper-systems"><p>Windscreen wiper systems</p><div class="part-image-slot" aria-hidden="true"></div></article>
+          <section id="shockDetailsPanel" class="lighting-details-panel" hidden>
+            <button id="shockDetailsClose" class="lighting-details-close" type="button" aria-label="Close">&times;</button>
+            <div class="lighting-details-grid">
+              <ul>
+                <li>Shock absorber</li>
+                <li>Shock absorber protection kit</li>
+                <li>Top mount</li>
+                <li>Spring Cap</li>
+              </ul>
+              <ul>
+                <li>Coil spring</li>
+                <li>Bump stop</li>
+                <li>Shock absorber's cover</li>
+                <li>Bush, leaf spring</li>
+              </ul>
+              <ul>
+                <li>Top Strut Mounting</li>
+                <li>Shock absorbers</li>
+              </ul>
+            </div>
+            <p class="lighting-details-link">Shock absorbers »</p>
+          </section>
+          <section id="steeringDetailsPanel" class="lighting-details-panel" hidden>
+            <button id="steeringDetailsClose" class="lighting-details-close" type="button" aria-label="Close">&times;</button>
+            <div class="lighting-details-grid">
+              <ul>
+                <li>Control arm</li>
+                <li>Control arm ball joint</li>
+                <li>Axial joint</li>
+                <li>Steering rack</li>
+              </ul>
+              <ul>
+                <li>Stabilizer link</li>
+                <li>Control arm silentblock</li>
+                <li>Power steering pump - remanufactured</li>
+                <li>Steering parts</li>
+              </ul>
+              <ul>
+                <li>Tie rod end</li>
+                <li>Stabilizer mount</li>
+              </ul>
+            </div>
+            <p class="lighting-details-link">Steering parts »</p>
+          </section>
+          <section id="wiperDetailsPanel" class="lighting-details-panel" hidden>
+            <button id="wiperDetailsClose" class="lighting-details-close" type="button" aria-label="Close">&times;</button>
+            <div class="lighting-details-grid">
+              <ul>
+                <li>Windscreen wiper blade</li>
+                <li>Wiper motor</li>
+                <li>Windscreen washer tank</li>
+                <li>Cap, washer fluid tank</li>
+              </ul>
+              <ul>
+                <li>Wiper arm</li>
+                <li>Windscreen washer system instalation part</li>
+                <li>Washer Fluid Jet, headlight cleaning</li>
+                <li>Windscreen wiper systems</li>
+              </ul>
+              <ul>
+                <li>Washer pump</li>
+                <li>Wiper mechanism without motor</li>
+              </ul>
+            </div>
+            <p class="lighting-details-link">Windscreen wiper systems »</p>
+          </section>
+          <article class="select-part-item clickable-part" data-part-group="1. Engine &amp; Service Parts" data-part-key="air-intake-system-parts"><p>Air intake system parts</p><div class="part-image-slot" aria-hidden="true"></div></article>
+          <section id="airIntakeDetailsPanel" class="lighting-details-panel" hidden>
+            <button id="airIntakeDetailsClose" class="lighting-details-close" type="button" aria-label="Close">&times;</button>
+            <div class="lighting-details-grid">
+              <ul>
+                <li>Throttle body</li>
+                <li>Mounting Kit, charger</li>
+                <li>Charger, charging system</li>
+                <li>Seal, turbo air hose</li>
+              </ul>
+              <ul>
+                <li>Hose, air supply</li>
+                <li>Gasket, charger</li>
+                <li>Boost Pressure Control Valve</li>
+              </ul>
+              <ul>
+                <li>Intake Manifold Module</li>
+                <li>Oil Pipe, charger</li>
+                <li>Air intake system parts</li>
+              </ul>
+            </div>
+            <p class="lighting-details-link">Air intake system parts &raquo;</p>
+          </section>
+          <article class="select-part-item clickable-part" data-part-group="3. Body &amp; Exterior Parts" data-part-key="body-parts"><p>Body parts</p><div class="part-image-slot" aria-hidden="true"></div></article>
+          <section id="bodyPartsDetailsPanel" class="lighting-details-panel" hidden>
+            <button id="bodyPartsDetailsClose" class="lighting-details-close" type="button" aria-label="Close">&times;</button>
+            <div class="lighting-details-grid">
+              <ul>
+                <li>Wing</li>
+                <li>Under engine cover</li>
+                <li>Bumper</li>
+                <li>Plastic inner fender</li>
+              </ul>
+              <ul>
+                <li>Bumper grill</li>
+                <li>Sill</li>
+                <li>Grill</li>
+              </ul>
+              <ul>
+                <li>Bumper bracket</li>
+                <li>Rear wheel arch</li>
+                <li>Body parts</li>
+              </ul>
+            </div>
+            <p class="lighting-details-link">Body parts &raquo;</p>
+          </section>
+          <article class="select-part-item clickable-part" data-part-group="1. Engine &amp; Service Parts" data-part-key="belts-pulleys"><p>Belts and pulleys</p><div class="part-image-slot" aria-hidden="true"></div></article>
+          <section id="beltsPulleysDetailsPanel" class="lighting-details-panel" hidden>
+            <button id="beltsPulleysDetailsClose" class="lighting-details-close" type="button" aria-label="Close">&times;</button>
+            <div class="lighting-details-grid">
+              <ul>
+                <li>V-ribbed belt</li>
+                <li>Water Pump &amp; Timing Belt Kit</li>
+                <li>Timing Belt</li>
+                <li>Tensioner Pulley, timing belt</li>
+              </ul>
+              <ul>
+                <li>Deflection/Guide Pulley, v-ribbed belt</li>
+                <li>Tensioner Lever, v-ribbed belt</li>
+                <li>Pulley kit with timing belt</li>
+              </ul>
+              <ul>
+                <li>V-Ribbed Belt Set</li>
+                <li>Alternator pulley</li>
+                <li>Belts and pulleys</li>
+              </ul>
+            </div>
+            <p class="lighting-details-link">Belts and pulleys &raquo;</p>
+          </section>
+          <article class="select-part-item clickable-part" data-part-group="1. Engine &amp; Service Parts" data-part-key="filters"><p>Filters</p><div class="part-image-slot" aria-hidden="true"></div></article>
+          <section id="filtersDetailsPanel" class="lighting-details-panel" hidden>
+            <button id="filtersDetailsClose" class="lighting-details-close" type="button" aria-label="Close">&times;</button>
+            <div class="lighting-details-grid">
+              <ul>
+                <li>Oil Filter</li>
+                <li>Air Filter</li>
+                <li>Air Filter, passenger compartment</li>
+                <li>Fuel Filter</li>
+              </ul>
+              <ul>
+                <li>Hydraulic Filter Set, automatic transmission</li>
+                <li>Cover, oil filter housing</li>
+                <li>Fiaam filter</li>
+              </ul>
+              <ul>
+                <li>Oil Pan, automatic transmission</li>
+                <li>Filter Set</li>
+                <li>Filters</li>
+              </ul>
+            </div>
+            <p class="lighting-details-link">Filters &raquo;</p>
+          </section>
+          <article class="select-part-item clickable-part" data-part-group="5. Tyres &amp; Rims" data-part-key="drive-system-parts"><p>Drive system parts</p><div class="part-image-slot" aria-hidden="true"></div></article>
+          <section id="driveSystemDetailsPanel" class="lighting-details-panel" hidden>
+            <button id="driveSystemDetailsClose" class="lighting-details-close" type="button" aria-label="Close">&times;</button>
+            <div class="lighting-details-grid">
+              <ul>
+                <li>Wheel bearing kit</li>
+                <li>CV-joint</li>
+                <li>CV-joint boot</li>
+              </ul>
+              <ul>
+                <li>Shaft Seal, differential</li>
+                <li>Axle shaft</li>
+                <li>Seal, drive shaft</li>
+              </ul>
+              <ul>
+                <li>Shaft Seal, wheel hub</li>
+                <li>Drive Shaft</li>
+                <li>Bearing, propshaft centre bearing</li>
+                <li>Drive system parts</li>
+              </ul>
+            </div>
+            <p class="lighting-details-link">Drive system parts &raquo;</p>
+          </section>
+          <article class="select-part-item clickable-part" data-part-group="2. Suspension &amp; Steering" data-part-key="universal-bearings"><p>Universal bearings</p><div class="part-image-slot" aria-hidden="true"></div></article>
+          <section id="universalBearingsDetailsPanel" class="lighting-details-panel" hidden>
+            <button id="universalBearingsDetailsClose" class="lighting-details-close" type="button" aria-label="Close">&times;</button>
+            <div class="lighting-details-grid">
+              <ul>
+                <li>Ball bearing</li>
+                <li>Universal bearings</li>
+              </ul>
+            </div>
+            <p class="lighting-details-link">Universal bearings &raquo;</p>
+          </section>
+
+          <article class="select-part-item clickable-part" data-part-group="2. Suspension &amp; Steering" data-part-key="gas-springs"><p>Gas springs</p><div class="part-image-slot" aria-hidden="true"></div></article>
+          <section id="gasSpringsDetailsPanel" class="lighting-details-panel" hidden>
+            <button id="gasSpringsDetailsClose" class="lighting-details-close" type="button" aria-label="Close">&times;</button>
+            <div class="lighting-details-grid">
+              <ul>
+                <li>Gas spring</li>
+                <li>Gas Spring, rear windscreen</li>
+                <li>Gas Spring, tray (boot/cargo bay)</li>
+                <li>Gas Spring, convertible top</li>
+              </ul>
+              <ul>
+                <li>Gas Spring, glove box</li>
+                <li>Gas Spring, foldaway table</li>
+                <li>Gas Spring, tailboard (tailgate)</li>
+              </ul>
+              <ul>
+                <li>Gas Spring, bed (pop-top)</li>
+                <li>Ball fastening</li>
+                <li>Gas springs</li>
+              </ul>
+            </div>
+            <p class="lighting-details-link">Gas springs &raquo;</p>
+          </section>
+          <article class="select-part-item clickable-part" data-part-group="4. Electrical &amp; Lighting" data-part-key="security-systems"><p>Security systems</p><div class="part-image-slot" aria-hidden="true"></div></article>
+          <section id="securitySystemsDetailsPanel" class="lighting-details-panel" hidden>
+            <button id="securitySystemsDetailsClose" class="lighting-details-close" type="button" aria-label="Close">&times;</button>
+            <div class="lighting-details-grid">
+              <ul>
+                <li>Door Lock</li>
+                <li>Outside door handle</li>
+                <li>Tailgate Lock</li>
+                <li>Ignition lock</li>
+              </ul>
+              <ul>
+                <li>Door Catch</li>
+                <li>Cable, door release</li>
+                <li>Sliding door pulleys</li>
+              </ul>
+              <ul>
+                <li>Steering column lock cylinder</li>
+                <li>Switch, door lock</li>
+                <li>Security systems</li>
+              </ul>
+            </div>
+            <p class="lighting-details-link">Security systems &raquo;</p>
+          </section>
+          <article class="select-part-item clickable-part" data-part-group="1. Engine &amp; Service Parts" data-part-key="clutches"><p>Clutches</p><div class="part-image-slot" aria-hidden="true"></div></article>
+          <section id="clutchesDetailsPanel" class="lighting-details-panel" hidden>
+            <button id="clutchesDetailsClose" class="lighting-details-close" type="button" aria-label="Close">&times;</button>
+            <div class="lighting-details-grid">
+              <ul>
+                <li>Clutch Kit</li>
+                <li>Slave Cylinder, clutch</li>
+                <li>Releaser</li>
+              </ul>
+              <ul>
+                <li>Clutch pump</li>
+                <li>Flywheel</li>
+                <li>Repair Kit, clutch master cylinder</li>
+              </ul>
+              <ul>
+                <li>Repair Kit, clutch slave cylinder</li>
+                <li>Clutch Cable</li>
+                <li>Clutch Pedal Pad</li>
+              </ul>
+            </div>
+            <p class="lighting-details-link">Clutches &raquo;</p>
+          </section>
+
+          <article class="select-part-item clickable-part" data-part-group="3. Body &amp; Exterior Parts" data-part-key="car-interior-equipment"><p>Car interior equipment</p><div class="part-image-slot" aria-hidden="true"></div></article>
+          <section id="carInteriorDetailsPanel" class="lighting-details-panel" hidden>
+            <button id="carInteriorDetailsClose" class="lighting-details-close" type="button" aria-label="Close">&times;</button>
+            <div class="lighting-details-grid">
+              <ul>
+                <li>Trunk insert</li>
+                <li>Brake Pedal Pad</li>
+                <li>Floor mats</li>
+                <li>Gear Lever Gaiter</li>
+                <li>Clutch Pedal Pad</li>
+              </ul>
+              <ul>
+                <li>CARGO COVER</li>
+                <li>Lock, glove box</li>
+                <li>Armrest</li>
+                <li>Cupholder</li>
+              </ul>
+              <ul>
+                <li>Car interior equipment</li>
+              </ul>
+            </div>
+            <p class="lighting-details-link">Car interior equipment &raquo;</p>
+          </section>
+          <article class="select-part-item clickable-part" data-part-group="4. Electrical &amp; Lighting" data-part-key="horns"><p>Horns</p><div class="part-image-slot" aria-hidden="true"></div></article>
+          <section id="hornsDetailsPanel" class="lighting-details-panel" hidden>
+            <button id="hornsDetailsClose" class="lighting-details-close" type="button" aria-label="Close">&times;</button>
+            <div class="lighting-details-grid">
+              <ul>
+                <li>Disc horn</li>
+                <li>Tube horns set</li>
+                <li>Tube horn</li>
+              </ul>
+              <ul>
+                <li>Air/Electric Horn</li>
+                <li>Disc horn</li>
+                <li>Horns</li>
+              </ul>
+            </div>
+            <p class="lighting-details-link">Horns &raquo;</p>
+          </section>
+          <article class="select-part-item clickable-part" data-part-group="4. Electrical &amp; Lighting" data-part-key="mirrors-connected-parts"><p>Mirrors and connected parts</p><div class="part-image-slot" aria-hidden="true"></div></article>
+          <section id="mirrorsDetailsPanel" class="lighting-details-panel" hidden>
+            <button id="mirrorsDetailsClose" class="lighting-details-close" type="button" aria-label="Close">&times;</button>
+            <div class="lighting-details-grid">
+              <ul>
+                <li>Door mirror glass base</li>
+                <li>Door mirror</li>
+                <li>Outer mirror cover</li>
+                <li>Door mirror glass</li>
+              </ul>
+              <ul>
+                <li>Holder, outside mirror</li>
+                <li>Control Element, outside mirror</li>
+                <li>Mirror System</li>
+              </ul>
+              <ul>
+                <li>Mirror Glass, blind spot mirror</li>
+                <li>Fastening Element, outside mirror cover</li>
+                <li>Mirrors and connected parts</li>
+              </ul>
+            </div>
+            <p class="lighting-details-link">Mirrors and connected parts &raquo;</p>
+          </section>
+
+          <article class="select-part-item clickable-part" data-part-group="5. Tyres &amp; Rims" data-part-key="engine-transmission-drive-mountings"><p>Engine, transmission and drive system mountings</p><div class="part-image-slot" aria-hidden="true"></div></article>
+          <section id="engineMountingsDetailsPanel" class="lighting-details-panel" hidden>
+            <button id="engineMountingsDetailsClose" class="lighting-details-close" type="button" aria-label="Close">&times;</button>
+            <div class="lighting-details-grid">
+              <ul>
+                <li>Transmission mounting</li>
+                <li>Engine mounting</li>
+                <li>Drive shaft vibration damper</li>
+                <li>Drive shaft support</li>
+              </ul>
+              <ul>
+                <li>Gear Lever Knob</li>
+                <li>Repair Kit, gear lever</li>
+                <li>Cable, manual transmission</li>
+              </ul>
+              <ul>
+                <li>Bush, selector-/shift rod</li>
+                <li>Gear Lever Gaiter</li>
+                <li>Engine, transsmision and drive system mountings</li>
+              </ul>
+            </div>
+            <p class="lighting-details-link">Engine, transmission and drive system mountings &raquo;</p>
+          </section>
+          <article class="select-part-item clickable-part" data-part-group="3. Body &amp; Exterior Parts" data-part-key="window-regulators"><p>Window regulators</p><div class="part-image-slot" aria-hidden="true"></div></article>
+          <section id="windowRegulatorsDetailsPanel" class="lighting-details-panel" hidden>
+            <button id="windowRegulatorsDetailsClose" class="lighting-details-close" type="button" aria-label="Close">&times;</button>
+            <div class="lighting-details-grid">
+              <ul>
+                <li>Window Lift</li>
+                <li>Electric window lift without motor</li>
+                <li>Window lift repair kit</li>
+                <li>Window lift electrical</li>
+              </ul>
+              <ul>
+                <li>Window lifter repair part</li>
+                <li>Sliding Shoe, window lift</li>
+                <li>Window Crank</li>
+              </ul>
+              <ul>
+                <li>Electric Motor, window lift</li>
+                <li>Window lift manual</li>
+                <li>Window regulators</li>
+              </ul>
+            </div>
+            <p class="lighting-details-link">Window regulators &raquo;</p>
+          </section>
+          <article class="select-part-item clickable-part" data-part-group="1. Engine &amp; Service Parts" data-part-key="fuel-system-parts"><p>Fuel system parts</p><div class="part-image-slot" aria-hidden="true"></div></article>
+          <section id="fuelSystemDetailsPanel" class="lighting-details-panel" hidden>
+            <button id="fuelSystemDetailsClose" class="lighting-details-close" type="button" aria-label="Close">&times;</button>
+            <div class="lighting-details-grid">
+              <ul>
+                <li>Fuel cap</li>
+                <li>EGR Valve</li>
+                <li>Throttle body</li>
+                <li>Knock Sensor</li>
+              </ul>
+              <ul>
+                <li>Diesel Injector</li>
+                <li>Sensor, exhaust gas temperature</li>
+                <li>Seal Ring, nozzle holder</li>
+              </ul>
+              <ul>
+                <li>Sensor, fuel pressure</li>
+                <li>Pressure Converter, exhaust control</li>
+                <li>Fuel system parts</li>
+              </ul>
+            </div>
+            <p class="lighting-details-link">Fuel system parts &raquo;</p>
+          </section>
+
+          <article class="select-part-item clickable-part" data-part-group="1. Engine &amp; Service Parts" data-part-key="oils"><p>Oils</p><div class="part-image-slot" aria-hidden="true"></div></article>
+          <section id="oilsDetailsPanel" class="lighting-details-panel" hidden>
+            <button id="oilsDetailsClose" class="lighting-details-close" type="button" aria-label="Close">&times;</button>
+            <div class="lighting-details-grid">
+              <ul>
+                <li>Engine oil</li>
+                <li>Oils</li>
+              </ul>
+            </div>
+            <p class="lighting-details-link">Oils &raquo;</p>
+          </section>
+          <article class="select-part-item clickable-part" data-part-group="1. Engine &amp; Service Parts" data-part-key="chemistry-cosmetic-care"><p>Chemistry and cosmetic care products</p><div class="part-image-slot" aria-hidden="true"></div></article>
+          <section id="chemistryDetailsPanel" class="lighting-details-panel" hidden>
+            <button id="chemistryDetailsClose" class="lighting-details-close" type="button" aria-label="Close">&times;</button>
+            <div class="lighting-details-grid">
+              <ul>
+                <li>Urea ADBLUE</li>
+                <li>Oil, dual-clutch transmission (DSG)</li>
+                <li>Chemistry and cosmetic care products</li>
+              </ul>
+            </div>
+            <p class="lighting-details-link">Chemistry and cosmetic care products &raquo;</p>
+          </section>
+          <article class="select-part-item clickable-part" data-part-group="2. Suspension &amp; Steering" data-part-key="braking-systems"><p>Braking systems</p><div class="part-image-slot" aria-hidden="true"></div></article>
+          <section id="brakingDetailsPanel" class="lighting-details-panel" hidden>
+            <button id="brakingDetailsClose" class="lighting-details-close" type="button" aria-label="Close">&times;</button>
+            <div class="lighting-details-grid">
+              <ul>
+                <li>Brake pads</li>
+                <li>Brake disc</li>
+                <li>Brake Caliper</li>
+                <li>Repair Kit, brake caliper</li>
+              </ul>
+              <ul>
+                <li>Brake shoes kit, drum brakes</li>
+                <li>Guide Sleeve Kit, brake caliper</li>
+                <li>Cable, parking brake</li>
+              </ul>
+              <ul>
+                <li>Repair kit, brake pads</li>
+                <li>Brake Hose</li>
+                <li>Braking systems</li>
+              </ul>
+            </div>
+            <p class="lighting-details-link">Braking systems &raquo;</p>
+          </section>
+
+          <article class="select-part-item clickable-part" data-part-group="3. Body &amp; Exterior Parts" data-part-key="other"><p>Other</p><div class="part-image-slot" aria-hidden="true"></div></article>
+          <section id="otherDetailsPanel" class="lighting-details-panel" hidden>
+            <button id="otherDetailsClose" class="lighting-details-close" type="button" aria-label="Close">&times;</button>
+            <div class="lighting-details-grid">
+              <ul>
+                <li>Gasket / Seal</li>
+                <li>Lid</li>
+                <li>Air Dryer Cartridge, compressed-air system</li>
+                <li>Contact Breaker, distributor</li>
+              </ul>
+              <ul>
+                <li>NOx Sensor, NOx Catalyst</li>
+                <li>Wedge Unit, drum brake</li>
+                <li>Locking Clip</li>
+              </ul>
+              <ul>
+                <li>Relay</li>
+                <li>Relay, ABS</li>
+                <li>Other</li>
+              </ul>
+            </div>
+            <p class="lighting-details-link">Other &raquo;</p>
+          </section>
+          <article class="select-part-item clickable-part" data-part-group="3. Body &amp; Exterior Parts" data-part-key="tools"><p>Tools</p><div class="part-image-slot" aria-hidden="true"></div></article>
+          <section id="toolsDetailsPanel" class="lighting-details-panel" hidden>
+            <button id="toolsDetailsClose" class="lighting-details-close" type="button" aria-label="Close">&times;</button>
+            <div class="lighting-details-grid">
+              <ul>
+                <li>Mounting Tool Set, ball joint</li>
+                <li>Cable Repair Set, outside temperature sensor</li>
+                <li>Mounting Tool, ball joint</li>
+              </ul>
+              <ul>
+                <li>Adjustment Tool Set, valve timing</li>
+                <li>Switch, handbrake warning light</li>
+                <li>Mounting Tool, camshaft</li>
+              </ul>
+              <ul>
+                <li>Multi-function Gauge</li>
+                <li>Other tools</li>
+                <li>Tools</li>
+              </ul>
+            </div>
+            <p class="lighting-details-link">Tools &raquo;</p>
+          </section>
+          <article class="select-part-item clickable-part" data-part-group="5. Tyres &amp; Rims" data-part-key="wheels"><p>Wheels</p><div class="part-image-slot" aria-hidden="true"></div></article>
+          <section id="wheelsDetailsPanel" class="lighting-details-panel" hidden>
+            <button id="wheelsDetailsClose" class="lighting-details-close" type="button" aria-label="Close">&times;</button>
+            <div class="lighting-details-grid">
+              <ul>
+                <li>Wheel Bolt</li>
+                <li>Wheel Nut</li>
+                <li>Wheel Stud</li>
+                <li>Wheel Sensor, tyre pressure control system</li>
+              </ul>
+              <ul>
+                <li>Track widening</li>
+                <li>Wheel Nut</li>
+                <li>Cap, wheel nut</li>
+              </ul>
+              <ul>
+                <li>Valve, tyre pressure control system</li>
+                <li>Repair Kit, wheel sensor (tyre pressure control system)</li>
+                <li>Wheels</li>
+              </ul>
+            </div>
+            <p class="lighting-details-link">Wheels &raquo;</p>
+          </section>
+
+          <article class="select-part-item clickable-part" data-part-group="1. Engine &amp; Service Parts" data-part-key="fuel-system"><p>Fuel system</p><div class="part-image-slot" aria-hidden="true"></div></article>
+          <section id="fuelSystemMainDetailsPanel" class="lighting-details-panel" hidden>
+            <button id="fuelSystemMainDetailsClose" class="lighting-details-close" type="button" aria-label="Close">&times;</button>
+            <div class="lighting-details-grid">
+              <ul>
+                <li>Hose, fuel overflow</li>
+                <li>Seal Ring, nozzle holder</li>
+                <li>Fuel Hose</li>
+                <li>Breather Valve, fuel tank</li>
+              </ul>
+              <ul>
+                <li>Gasket, fuel pump</li>
+                <li>Repair Kit, fuel pump</li>
+                <li>Fuel Line</li>
+              </ul>
+              <ul>
+                <li>Relay, fuel pump</li>
+                <li>Steel Strap, fuel tank</li>
+                <li>Fuel system</li>
+              </ul>
+            </div>
+            <p class="lighting-details-link">Fuel system &raquo;</p>
+          </section>
+          <article class="select-part-item clickable-part" data-part-group="1. Engine &amp; Service Parts" data-part-key="engine-main"><p>Engine</p><div class="part-image-slot" aria-hidden="true"></div></article>
+          <section id="engineMainDetailsPanel" class="lighting-details-panel" hidden>
+            <button id="engineMainDetailsClose" class="lighting-details-close" type="button" aria-label="Close">&times;</button>
+            <div class="lighting-details-grid">
+              <ul>
+                <li>Oil Drain Plug, oil pan</li>
+                <li>Gasket, cylinder head cover</li>
+                <li>Gasket, cylinder head</li>
+                <li>Timing Chain Kit</li>
+              </ul>
+              <ul>
+                <li>Gasket Set, cylinder head</li>
+                <li>Gasket, intake manifold</li>
+                <li>Bolt Kit, cylinder head</li>
+              </ul>
+              <ul>
+                <li>Gasket, exhaust manifold</li>
+                <li>Charger Intake Hose</li>
+                <li>Engine</li>
+              </ul>
+            </div>
+            <p class="lighting-details-link">Engine &raquo;</p>
+          </section>
+          <article class="select-part-item clickable-part" data-part-group="1. Engine &amp; Service Parts" data-part-key="transmission-main"><p>Transmission</p><div class="part-image-slot" aria-hidden="true"></div></article>
+          <section id="transmissionMainDetailsPanel" class="lighting-details-panel" hidden>
+            <button id="transmissionMainDetailsClose" class="lighting-details-close" type="button" aria-label="Close">&times;</button>
+            <div class="lighting-details-grid">
+              <ul>
+                <li>Shaft Seal, automatic transmission</li>
+                <li>Oil Dipstick, automatic transmission</li>
+                <li>Repair Kit, manual transmission</li>
+                <li>Screw Plug, transmission housing</li>
+              </ul>
+              <ul>
+                <li>Valve Unit, aut. transm. hydraulic unit</li>
+                <li>Torque Converter</li>
+                <li>Seal, automatic transmission oil pump</li>
+              </ul>
+              <ul>
+                <li>Repair Kit, mechatronics (automatic transmission)</li>
+                <li>Seal Ring, hydraulic filter</li>
+                <li>Transmission</li>
+              </ul>
+            </div>
+            <p class="lighting-details-link">Transmission &raquo;</p>
+          </section>
+          <article class="select-part-item clickable-part" data-part-group="1. Engine &amp; Service Parts" data-part-key="exhaust-system-main"><p>Exhaust System</p><div class="part-image-slot" aria-hidden="true"></div></article>
+          <section id="exhaustMainDetailsPanel" class="lighting-details-panel" hidden>
+            <button id="exhaustMainDetailsClose" class="lighting-details-close" type="button" aria-label="Close">&times;</button>
+            <div class="lighting-details-grid">
+              <ul>
+                <li>Gasket, exhaust pipe</li>
+                <li>Exhaust silencer, rear</li>
+                <li>Rubber Strip, exhaust system</li>
+                <li>Middle Silencer</li>
+              </ul>
+              <ul>
+                <li>Clamp, exhaust system</li>
+                <li>Exhaust Pipe</li>
+                <li>Seal, exhaust pipe</li>
+              </ul>
+              <ul>
+                <li>Catalytic Converter</li>
+                <li>Mounting Kit, charger</li>
+                <li>Exhaust System</li>
+              </ul>
+            </div>
+            <p class="lighting-details-link">Exhaust System &raquo;</p>
+          </section>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <dialog id="quickView" class="quickview">
+    <article id="quickViewContent"></article>
+    <button id="closeQuickView" class="btn btn-outline">Close</button>
+  </dialog>
+
+  <script src="assets/app.js?v=20261012-hosting"></script>
+
+  <p class='site-copyright'>Copyright 2026 &copy; Nicbel Motor Spares. All rights reserved. Powered by CodeDev Solutions</p>
+  <script src="assets/editorial.js?v=20261012-hosting"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
